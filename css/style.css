@@ -1,0 +1,98 @@
+h1{
+color: #31A5AC;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #062f4b;
+    --bg-color: #effcfd;
+    
+    --footer-color: #292929;
+    --secondary: #31A5AC;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+body {
+    font-family: 'Fjalla One', sans-serif;
+    background-color: var(--bg-color);
+    font-size: 20px !important;
+}
+
+.primary-color {
+    color: var(--primary-color) !important;
+}
+
+.secondary {
+    color: var(--secondary);
+    font-weight: 900;
+}
+
+.gray {
+    background-color: var(--gray);
+    color: rgb(34, 34, 34);
+    padding: 7px 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.object-fit {
+    object-fit: cover;
+}
+
+.form-label {
+    font-size: 20px !important;
+    font-weight: 600;
+}
+/* alert message  */
+.toast-message {
+    position: fixed;
+    z-index: 999;
+    top: 5rem;
+    right: 10rem;
+    font-weight: 800;
+    background-color:white;
+    color: rgba(241, 6, 6, 0.466);
+    border: 1px solid #fff;
+    border-radius: 0.25rem;
+    padding: 2rem 5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.toast-message-slide-in {
+    animation: toast-animation-in 0.5s ease-in;
+}
+
+.toast-message-slide-out {
+    animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-animation-in {
+    from {
+        transform: translateX(200px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 5;
+    }
+}
+
+@keyframes toast-animation-out {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}
